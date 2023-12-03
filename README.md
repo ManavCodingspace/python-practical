@@ -1,6 +1,6 @@
 # python-practical
 
-# ***Practical 1***
+# ***Practical 1*** - WAP to find the roots of a quadratic equation
 
 #**Program to find roots of a quadratic equation**
 
@@ -20,8 +20,17 @@ d=(b**2)-(4*a*c)
 
 print('The value of discriminant is:',d)
 
-# ***Practical 2***
-def is_prime(num):
+# ***Practical 2*** - WAP to accept a number ‘n’ and
+a. Check if ’n’ is prime
+
+b. Generate all prime numbers till ‘n’
+
+c. Generate first ‘n’ prime numbers
+
+This program may be done using functions
+
+
+    def is_prime(num):
     
     if num < 2:
         
@@ -67,7 +76,7 @@ print(f"Prime numbers till {number}: {primes_till_n}")
 first_n_primes = generate_first_n_primes(number)
 print(f"First {number} prime numbers: {first_n_primes}")
 
-# ***Practical 3***
+# ***Practical 3*** - WAP to create a pyramid of the character ‘*’ and a reverse pyramid
 def print_pyramid(rows):
    
     for i in range(1, rows + 1):
@@ -92,8 +101,16 @@ reverse_pyramid_rows = 5
 print("\nReverse Pyramid:")
 print_reverse_pyramid(reverse_pyramid_rows)
 
-# ***Practical 4***
-def char_analysis(char):
+# ***Practical 4*** - WAP that accepts a character and performs the following:
+
+a. print whether the character is a letter or numeric digit or a special character
+
+b. if the character is a letter, print whether the letter is uppercase or lowercase
+
+c. if the character is a numeric digit, prints its name in text (e.g., if input is 9, output
+is NINE)
+
+    def char_analysis(char):
     
     if char.isalpha():
         if char.isupper():
@@ -113,20 +130,29 @@ character = input("Enter a character: ")
 # Analyze the character
 char_analysis(character)
 
-# ***Practical 5***
-def frequency_of_character(input_string, char):
+# ***Practical 5*** - WAP to perform the following operations on a string
+
+a. Find the frequency of a character in a string.
+
+b. Replace a character by another character in a string.
+
+c. Remove the first occurrence of a character from a string.
+
+d. Remove all occurrences of a character from a string.
+
+    def frequency_of_character(input_string, char):
    
     return input_string.count(char)
 
-def replace_character(input_string, old_char, new_char):
+    def replace_character(input_string, old_char, new_char):
     
     return input_string.replace(old_char, new_char)
 
-def remove_first_occurrence(input_string, char):
+    def remove_first_occurrence(input_string, char):
     
     return input_string.replace(char, '', 1)
 
-def remove_all_occurrences(input_string, char):
+    def remove_all_occurrences(input_string, char):
    
     return input_string.replace(char, '')
 
@@ -165,11 +191,12 @@ string_after_remove_all = remove_all_occurrences(input_string, char_to_remove_al
 
 print(f"The string after removing all occurrences of '{char_to_remove_all}': {string_after_remove_all}")
 
-# ***Practical 6***
-def swap_first_n_characters(str1, str2, n):
-    if n > min(len(str1), len(str2)):
-        print("Cannot swap first", n, "characters as one or both strings are shorter.")
-        return
+# ***Practical 6*** - WAP to swap the first n characters of two strings
+
+     def swap_first_n_characters(str1, str2, n):
+           if n > min(len(str1), len(str2)):
+           print("Cannot swap first", n, "characters as one or both strings are shorter.")
+           return
 
     new_str1 = str2[:n] + str1[n:]
     new_str2 = str1[:n] + str2[n:]
@@ -190,10 +217,14 @@ if result1 and result2:
     print("String 1:", result1)
     print("String 2:", result2)
 
-# ***Practical 7***
-def find_occurrences_indices(main_string, sub_string):
-    indices = []
-    index = main_string.find(sub_string)
+# ***Practical 7*** - Write a function that accepts two strings and returns the indices of all the occurrences of
+the second string in the first string as a list. If the second string is not present in the first
+string then it should return -1.
+
+    
+    def find_occurrences_indices(main_string, sub_string):
+          indices = []
+          index = main_string.find(sub_string)
 
     while index != -1:
         indices.append(index)
@@ -202,7 +233,13 @@ def find_occurrences_indices(main_string, sub_string):
     return indices if indices else -1
 
 
- # ***Practical 8***
+ # ***Practical 8*** - WAP to create a list of the cubes of only the even integers appearing in the input list (may
+have elements of other types also) using the following:
+
+a. 'for' loop
+
+b. list comprehension
+
  Using 'for' loop:
       
       def cubes_of_even_numbers_for_loop(input_list):
@@ -217,7 +254,19 @@ Using List Comprehension:
      def cubes_of_even_numbers_list_comprehension(input_list):
     return [element ** 3 for element in input_list if isinstance(element, int) and element % 2 == 0]
 
-# ***Practical 9***
+# ***Practical 9*** - WAP to read a file and
+
+a. Print the total number of characters, words and lines in the file.
+
+b. Calculate the frequency of each character in the file. Use a variable of dictionary
+type to maintain the count.
+
+c. Print the words in reverse order.
+
+d. Copy even lines of the file to a file named ‘File1’ and odd lines to another file
+named ‘File2’.
+
+
 def analyze_file(file_path):
     
     with open(file_path, 'r') as file:
@@ -257,7 +306,11 @@ def analyze_file(file_path):
                 else:
                     file2.write(line + '\n')
 
-# ***Practical 10***
+# ***Practical 10*** - WAP to define a class Point with coordinates x and y as attributes. Create relevant
+methods and print the objects. Also define a method distance to calculate the distance
+between any two point objects
+
+
 import math
 
 class Point:
@@ -285,7 +338,8 @@ distance_between_points = point1.distance(point2)
 
 print(f"Distance between the points: {distance_between_points}")
 
-# ***Practical 11***
+# ***Practical 11*** -  Write a function that prints a dictionary where the keys are numbers between 1 and 5 and
+the values are cubes of the keys
 
 def create_cubes_dictionary():
    
@@ -293,7 +347,16 @@ def create_cubes_dictionary():
     
     return cubes_dict
 
-# ***Practical 12***
+# ***Practical 12*** - Consider a tuple t1=(1, 2, 5, 7, 9, 2, 4, 6, 8, 10). WAP to perform following operations:
+
+a) Print half the values of the tuple in one line and the other half in the next line.
+
+b) Print another tuple whose values are even numbers in the given tuple.
+
+c) Concatenate a tuple t2=(11,13,15) with t1.
+
+d) Return maximum and minimum value from this tuple
+
 
 # Given tuple
 
@@ -339,7 +402,8 @@ print("\nd) Maximum value in the tuple:", max_value)
 
 print("   Minimum value in the tuple:", min_value)
 
-# ***Practical 13***
+# ***Practical 13*** - . WAP to accept a name from a user. Raise and handle appropriate exception(s) if the text
+entered by the user contains digits and/or special characters.
 
     def validate_name(name):
    
