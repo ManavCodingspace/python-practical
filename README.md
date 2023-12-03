@@ -22,18 +22,24 @@ print('The value of discriminant is:',d)
 
 # ***Practical 2***
 def is_prime(num):
+    
     if num < 2:
+        
         return False
+   
     for i in range(2, int(num**0.5) + 1):
+        
         if num % i == 0:
             return False
     return True
 
 def generate_primes_till_n(n):
+    
     primes = [num for num in range(2, n+1) if is_prime(num)]
     return primes
 
 def generate_first_n_primes(n):
+   
     primes = []
     num = 2
     while len(primes) < n:
@@ -47,8 +53,10 @@ number = int(input("Enter a number (n): "))
 
 # a. Check if 'n' is prime
 if is_prime(number):
+   
     print(f"{number} is a prime number.")
 else:
+   
     print(f"{number} is not a prime number.")
 
 # b. Generate all prime numbers till 'n'
@@ -61,10 +69,12 @@ print(f"First {number} prime numbers: {first_n_primes}")
 
 # ***Practical 3***
 def print_pyramid(rows):
+   
     for i in range(1, rows + 1):
         print(' ' * (rows - i) + '*' * (2 * i - 1))
 
 def print_reverse_pyramid(rows):
+    
     for i in range(rows, 0, -1):
         print(' ' * (rows - i) + '*' * (2 * i - 1))
 
@@ -84,6 +94,7 @@ print_reverse_pyramid(reverse_pyramid_rows)
 
 # ***Practical 4***
 def char_analysis(char):
+    
     if char.isalpha():
         if char.isupper():
             print(f"The character '{char}' is an uppercase letter.")
@@ -104,15 +115,19 @@ char_analysis(character)
 
 # ***Practical 5***
 def frequency_of_character(input_string, char):
+   
     return input_string.count(char)
 
 def replace_character(input_string, old_char, new_char):
+    
     return input_string.replace(old_char, new_char)
 
 def remove_first_occurrence(input_string, char):
+    
     return input_string.replace(char, '', 1)
 
 def remove_all_occurrences(input_string, char):
+   
     return input_string.replace(char, '')
 
 # Take user input
@@ -127,18 +142,27 @@ print(f"The frequency of '{char_to_find}' in the string is: {frequency}")
 
 # b. Replace a character by another character in a string
 old_char = input("Enter the character to be replaced: ")
+
 new_char = input("Enter the new character: ")
+
 string_after_replace = replace_character(input_string, old_char, new_char)
+
 print(f"The string after replacing '{old_char}' with '{new_char}': {string_after_replace}")
 
 # c. Remove the first occurrence of a character from a string
+
 char_to_remove_first = input("Enter the character to be removed (first occurrence): ")
+
 string_after_remove_first = remove_first_occurrence(input_string, char_to_remove_first)
+
 print(f"The string after removing the first occurrence of '{char_to_remove_first}': {string_after_remove_first}")
 
 # d. Remove all occurrences of a character from a string
+
 char_to_remove_all = input("Enter the character to be removed (all occurrences): ")
+
 string_after_remove_all = remove_all_occurrences(input_string, char_to_remove_all)
+
 print(f"The string after removing all occurrences of '{char_to_remove_all}': {string_after_remove_all}")
 
 # ***Practical 6***
@@ -177,31 +201,25 @@ def find_occurrences_indices(main_string, sub_string):
 
     return indices if indices else -1
 
-# Example usage
-main_str = "abababab"
-sub_str = "ab"
-
-result = find_occurrences_indices(main_str, sub_str)
-
-if result == -1:
-    print(f"The substring '{sub_str}' is not present in the main string.")
-else:
-    print(f"The substring '{sub_str}' occurs at indices: {result}")
 
  # ***Practical 8***
  Using 'for' loop:
+      
       def cubes_of_even_numbers_for_loop(input_list):
     result = []
     for element in input_list:
         if isinstance(element, int) and element % 2 == 0:
             result.append(element ** 3)
     return result
+
 Using List Comprehension:
+     
      def cubes_of_even_numbers_list_comprehension(input_list):
     return [element ** 3 for element in input_list if isinstance(element, int) and element % 2 == 0]
 
 # ***Practical 9***
 def analyze_file(file_path):
+    
     with open(file_path, 'r') as file:
         # a. Print the total number of characters, words, and lines in the file
         content = file.read()
@@ -256,11 +274,15 @@ class Point:
         return math.sqrt(dx**2 + dy**2)
 
 # Print coordinates of the points
+
 point1.print_coordinates()
+
 point2.print_coordinates()
 
 # Calculate and print the distance between the points
+
 distance_between_points = point1.distance(point2)
+
 print(f"Distance between the points: {distance_between_points}")
 
 # ***Practical 11***
@@ -270,30 +292,47 @@ def create_cubes_dictionary():
     return cubes_dict
 # ***Practical 12***
 # Given tuple
+
 t1 = (1, 2, 5, 7, 9, 2, 4, 6, 8, 10)
 
 # a) Print half the values of the tuple in one line and the other half in the next line.
+
 half_length = len(t1) // 2
+
 print("a) Half the values of the tuple in one line:")
+
 print(t1[:half_length])
+
 print("   The other half in the next line:")
+
 print(t1[half_length:])
 
 # b) Print another tuple whose values are even numbers in the given tuple.
+
 even_numbers_tuple = tuple(num for num in t1 if num % 2 == 0)
+
 print("\nb) Tuple of even numbers in the given tuple:")
+
 print(even_numbers_tuple)
 
 # c) Concatenate a tuple t2=(11, 13, 15) with t1.
+
 t2 = (11, 13, 15)
+
 concatenated_tuple = t1 + t2
+
 print("\nc) Concatenated tuple of t1 and t2:")
+
 print(concatenated_tuple)
 
 # d) Return maximum and minimum value from this tuple
+
 max_value = max(t1)
+
 min_value = min(t1)
+
 print("\nd) Maximum value in the tuple:", max_value)
+
 print("   Minimum value in the tuple:", min_value)
 
 # ***Practical 13***
@@ -302,12 +341,6 @@ def validate_name(name):
         if not char.isalpha():
             raise ValueError("Name should only contain alphabetic characters.")
 
-# Example usage
-try:
-    user_input = input("Enter your name: ")
-    validate_name(user_input)
-    print("Entered name:", user_input)
-except ValueError as ve:
-    print(f"Error: {ve}")
+
 
 
