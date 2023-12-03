@@ -288,9 +288,13 @@ print(f"Distance between the points: {distance_between_points}")
 # ***Practical 11***
 
 def create_cubes_dictionary():
+   
     cubes_dict = {num: num ** 3 for num in range(1, 6)}
+    
     return cubes_dict
+
 # ***Practical 12***
+
 # Given tuple
 
 t1 = (1, 2, 5, 7, 9, 2, 4, 6, 8, 10)
@@ -336,9 +340,13 @@ print("\nd) Maximum value in the tuple:", max_value)
 print("   Minimum value in the tuple:", min_value)
 
 # ***Practical 13***
-def validate_name(name):
+
+    def validate_name(name):
+   
     for char in name:
+    
         if not char.isalpha():
+        
             raise ValueError("Name should only contain alphabetic characters.")
 
 
