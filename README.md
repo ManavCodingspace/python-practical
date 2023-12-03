@@ -402,8 +402,7 @@ print("\nd) Maximum value in the tuple:", max_value)
 
 print("   Minimum value in the tuple:", min_value)
 
-# ***Practical 13*** - . WAP to accept a name from a user. Raise and handle appropriate exception(s) if the text
-entered by the user contains digits and/or special characters.
+# ***Practical 13*** - . WAP to accept a name from a user. Raise and handle appropriate exception(s) if the textentered by the user contains digits and/or special characters.
 
     def validate_name(name):
    
